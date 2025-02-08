@@ -4,6 +4,9 @@
  */
 package ui;
 
+import static java.awt.image.ImageObserver.HEIGHT;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author soumyasingh
@@ -26,48 +29,48 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        GenderbuttonGroup = new javax.swing.ButtonGroup();
-        MainJPanel = new javax.swing.JPanel();
-        UserProfileLabel = new javax.swing.JLabel();
-        FirstNameLabel = new javax.swing.JLabel();
-        FnameTextField = new javax.swing.JTextField();
-        LastNameLabel = new javax.swing.JLabel();
-        PhoneNTextField = new javax.swing.JTextField();
-        LastNameLabel1 = new javax.swing.JLabel();
+        genderbuttonGroup = new javax.swing.ButtonGroup();
+        mainJPanel = new javax.swing.JPanel();
+        userProfileLabel = new javax.swing.JLabel();
+        firstNameLabel = new javax.swing.JLabel();
+        fnameTextField = new javax.swing.JTextField();
+        lastNameLabel = new javax.swing.JLabel();
+        phoneNTextField = new javax.swing.JTextField();
+        lastNameLabel1 = new javax.swing.JLabel();
         fRadioButton = new javax.swing.JRadioButton();
         mRadioButton = new javax.swing.JRadioButton();
-        PhoneNLabel = new javax.swing.JLabel();
-        LnameTextField1 = new javax.swing.JTextField();
-        EmailLabel = new javax.swing.JLabel();
-        EmailTextField = new javax.swing.JTextField();
-        SubmitButton = new javax.swing.JButton();
+        phoneNLabel = new javax.swing.JLabel();
+        lnameTextField = new javax.swing.JTextField();
+        emailLabel = new javax.swing.JLabel();
+        emailTextField = new javax.swing.JTextField();
+        submitButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        MainJPanel.setBackground(new java.awt.Color(255, 204, 204));
+        mainJPanel.setBackground(new java.awt.Color(255, 204, 204));
 
-        UserProfileLabel.setFont(new java.awt.Font("Kohinoor Bangla", 1, 18)); // NOI18N
-        UserProfileLabel.setText("User Profile");
+        userProfileLabel.setFont(new java.awt.Font("Kohinoor Bangla", 1, 18)); // NOI18N
+        userProfileLabel.setText("User Profile");
 
-        FirstNameLabel.setText("First Name");
+        firstNameLabel.setText("First Name");
 
-        FnameTextField.addActionListener(new java.awt.event.ActionListener() {
+        fnameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FnameTextFieldActionPerformed(evt);
+                fnameTextFieldActionPerformed(evt);
             }
         });
 
-        LastNameLabel.setText("Last Name");
+        lastNameLabel.setText("Last Name");
 
-        PhoneNTextField.addActionListener(new java.awt.event.ActionListener() {
+        phoneNTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PhoneNTextFieldActionPerformed(evt);
+                phoneNTextFieldActionPerformed(evt);
             }
         });
 
-        LastNameLabel1.setText("Gender");
+        lastNameLabel1.setText("Gender");
 
-        GenderbuttonGroup.add(fRadioButton);
+        genderbuttonGroup.add(fRadioButton);
         fRadioButton.setText("Female");
         fRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,103 +78,99 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        GenderbuttonGroup.add(mRadioButton);
+        genderbuttonGroup.add(mRadioButton);
         mRadioButton.setText("Male");
 
-        PhoneNLabel.setText("Phone No.");
+        phoneNLabel.setText("Phone No.");
 
-        LnameTextField1.addActionListener(new java.awt.event.ActionListener() {
+        lnameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LnameTextField1ActionPerformed(evt);
+                lnameTextFieldActionPerformed(evt);
             }
         });
 
-        EmailLabel.setText("Email");
+        emailLabel.setText("Email");
 
-        EmailTextField.addActionListener(new java.awt.event.ActionListener() {
+        emailTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmailTextFieldActionPerformed(evt);
+                emailTextFieldActionPerformed(evt);
             }
         });
 
-        SubmitButton.setBackground(new java.awt.Color(0, 0, 0));
-        SubmitButton.setForeground(new java.awt.Color(255, 204, 204));
-        SubmitButton.setText("Submit");
-        SubmitButton.addActionListener(new java.awt.event.ActionListener() {
+        submitButton.setBackground(new java.awt.Color(0, 0, 0));
+        submitButton.setForeground(new java.awt.Color(255, 204, 204));
+        submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubmitButtonActionPerformed(evt);
+                submitButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout MainJPanelLayout = new javax.swing.GroupLayout(MainJPanel);
-        MainJPanel.setLayout(MainJPanelLayout);
-        MainJPanelLayout.setHorizontalGroup(
-            MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainJPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout mainJPanelLayout = new javax.swing.GroupLayout(mainJPanel);
+        mainJPanel.setLayout(mainJPanelLayout);
+        mainJPanelLayout.setHorizontalGroup(
+            mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainJPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(SubmitButton)
+                .addComponent(submitButton)
                 .addGap(28, 28, 28))
-            .addGroup(MainJPanelLayout.createSequentialGroup()
+            .addGroup(mainJPanelLayout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(MainJPanelLayout.createSequentialGroup()
-                        .addComponent(UserProfileLabel)
+                .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(mainJPanelLayout.createSequentialGroup()
+                        .addComponent(userProfileLabel)
                         .addGap(55, 55, 55))
-                    .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainJPanelLayout.createSequentialGroup()
-                            .addComponent(EmailLabel)
+                    .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainJPanelLayout.createSequentialGroup()
+                            .addComponent(emailLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(EmailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(29, 29, 29))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainJPanelLayout.createSequentialGroup()
-                            .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(LastNameLabel)
-                                .addComponent(LastNameLabel1)
-                                .addComponent(FirstNameLabel)
-                                .addComponent(PhoneNLabel))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainJPanelLayout.createSequentialGroup()
+                            .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lastNameLabel)
+                                .addComponent(lastNameLabel1)
+                                .addComponent(firstNameLabel)
+                                .addComponent(phoneNLabel))
                             .addGap(44, 44, 44)
-                            .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(PhoneNTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(MainJPanelLayout.createSequentialGroup()
+                            .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(phoneNTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(mainJPanelLayout.createSequentialGroup()
                                     .addComponent(mRadioButton)
                                     .addGap(29, 29, 29)
                                     .addComponent(fRadioButton))
-                                .addComponent(FnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LnameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(fnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
-        MainJPanelLayout.setVerticalGroup(
-            MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MainJPanelLayout.createSequentialGroup()
+        mainJPanelLayout.setVerticalGroup(
+            mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainJPanelLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(UserProfileLabel)
+                .addComponent(userProfileLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(FirstNameLabel)
-                    .addComponent(FnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MainJPanelLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(LastNameLabel)
-                        .addGap(24, 24, 24))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainJPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LnameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LastNameLabel1)
+                .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(firstNameLabel)
+                    .addComponent(fnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lastNameLabel)
+                    .addComponent(lnameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lastNameLabel1)
                     .addComponent(mRadioButton)
                     .addComponent(fRadioButton))
                 .addGap(18, 18, 18)
-                .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PhoneNTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PhoneNLabel))
+                .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(phoneNTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(phoneNLabel))
                 .addGap(18, 18, 18)
-                .addGroup(MainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(EmailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EmailLabel))
+                .addGroup(mainJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailLabel))
                 .addGap(18, 18, 18)
-                .addComponent(SubmitButton)
+                .addComponent(submitButton)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -179,39 +178,73 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void FnameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FnameTextFieldActionPerformed
+    private void fnameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_FnameTextFieldActionPerformed
+    }//GEN-LAST:event_fnameTextFieldActionPerformed
 
-    private void PhoneNTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PhoneNTextFieldActionPerformed
+    private void phoneNTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneNTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PhoneNTextFieldActionPerformed
+    }//GEN-LAST:event_phoneNTextFieldActionPerformed
 
     private void fRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fRadioButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fRadioButtonActionPerformed
 
-    private void LnameTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LnameTextField1ActionPerformed
+    private void lnameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LnameTextField1ActionPerformed
+    }//GEN-LAST:event_lnameTextFieldActionPerformed
 
-    private void EmailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTextFieldActionPerformed
+    private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EmailTextFieldActionPerformed
+    }//GEN-LAST:event_emailTextFieldActionPerformed
 
-    private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SubmitButtonActionPerformed
+        try {
+            String fname;
+            String lname;
+            String phone;
+            String email;
+            String gender;
+            
+        
+            fname = this.fnameTextField.getText();
+            lname = this.lnameTextField.getText();
+            phone = this.phoneNTextField.getText();
+            email = this.emailTextField.getText();
+            
+            gender = this.genderbuttonGroup.getSelection().getActionCommand();
+        
+            System.out.println(fname);
+            System.out.println(lname);
+            System.out.println(gender);
+            System.out.println(phone);
+            System.out.println(email);
+        
+            if(fname.isBlank()){
+                JOptionPane.showMessageDialog(rootPane, "Please enter your first name", "Oops!", HEIGHT);
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Welcome " + fname + lname + "you profile has been successfully created!", "Success!", HEIGHT);
+           
+            } 
+            
+        } catch (ExceptionInInitializerError ne) {
+            JOptionPane.showMessageDialog(rootPane, "Please select your gender ", "Oops!", HEIGHT);
+        }
+         catch (Exception e){
+            JOptionPane.showMessageDialog(rootPane, "Oops, something went wrong! ", "Failed!", HEIGHT);
+        }
+    }//GEN-LAST:event_submitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,20 +282,20 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel EmailLabel;
-    private javax.swing.JTextField EmailTextField;
-    private javax.swing.JLabel FirstNameLabel;
-    private javax.swing.JTextField FnameTextField;
-    private javax.swing.ButtonGroup GenderbuttonGroup;
-    private javax.swing.JLabel LastNameLabel;
-    private javax.swing.JLabel LastNameLabel1;
-    private javax.swing.JTextField LnameTextField1;
-    private javax.swing.JPanel MainJPanel;
-    private javax.swing.JLabel PhoneNLabel;
-    private javax.swing.JTextField PhoneNTextField;
-    private javax.swing.JButton SubmitButton;
-    private javax.swing.JLabel UserProfileLabel;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JTextField emailTextField;
     private javax.swing.JRadioButton fRadioButton;
+    private javax.swing.JLabel firstNameLabel;
+    private javax.swing.JTextField fnameTextField;
+    private javax.swing.ButtonGroup genderbuttonGroup;
+    private javax.swing.JLabel lastNameLabel;
+    private javax.swing.JLabel lastNameLabel1;
+    private javax.swing.JTextField lnameTextField;
     private javax.swing.JRadioButton mRadioButton;
+    private javax.swing.JPanel mainJPanel;
+    private javax.swing.JLabel phoneNLabel;
+    private javax.swing.JTextField phoneNTextField;
+    private javax.swing.JButton submitButton;
+    private javax.swing.JLabel userProfileLabel;
     // End of variables declaration//GEN-END:variables
 }
