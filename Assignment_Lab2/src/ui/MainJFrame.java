@@ -210,7 +210,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
+        
         try {
+        
             String fname;
             String lname;
             String phone;
@@ -230,13 +232,20 @@ public class MainJFrame extends javax.swing.JFrame {
             System.out.println(gender);
             System.out.println(phone);
             System.out.println(email);
-        
+            
             if(fname.isBlank()){
                 JOptionPane.showMessageDialog(rootPane, "Please enter your first name", "Oops!", HEIGHT);
-            } else {
+            } else 
                 JOptionPane.showMessageDialog(rootPane, "Welcome " + fname + lname + "you profile has been successfully created!", "Success!", HEIGHT);
-           
-            } 
+            
+            if(lname.isBlank()){
+                JOptionPane.showMessageDialog(rootPane, "Please enter your last name", "Oops!", HEIGHT);
+            } else if(phone.isBlank()){
+                JOptionPane.showMessageDialog(rootPane, "Please enter your phone number", "Oops!", HEIGHT);
+            } else if(email.isBlank()){
+                JOptionPane.showMessageDialog(rootPane, "Seems like you forgot entering your email", "Oops!", HEIGHT);
+            } else
+                JOptionPane.showMessageDialog(rootPane, "Welcome " + fname + lname + "you profile has been successfully created!", "Success!", HEIGHT);
             
         } catch (ExceptionInInitializerError ne) {
             JOptionPane.showMessageDialog(rootPane, "Please select your gender ", "Oops!", HEIGHT);
@@ -244,6 +253,7 @@ public class MainJFrame extends javax.swing.JFrame {
          catch (Exception e){
             JOptionPane.showMessageDialog(rootPane, "Oops, something went wrong! ", "Failed!", HEIGHT);
         }
+            
     }//GEN-LAST:event_submitButtonActionPerformed
 
     /**
