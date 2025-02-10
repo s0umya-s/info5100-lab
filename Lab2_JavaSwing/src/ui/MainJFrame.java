@@ -31,7 +31,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         collegeButtonGroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        registrationLabel = new javax.swing.JLabel();
         nameField = new javax.swing.JTextField();
         nameLabel = new javax.swing.JLabel();
         collegeLabel = new javax.swing.JLabel();
@@ -44,9 +44,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
-        jLabel1.setBackground(java.awt.Color.blue);
-        jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("Registration");
+        registrationLabel.setBackground(java.awt.Color.blue);
+        registrationLabel.setForeground(java.awt.Color.white);
+        registrationLabel.setText("Registration");
 
         nameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +97,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addComponent(submitButton)
                     .addComponent(cosRadioButton)
                     .addComponent(copsRadioButton)
-                    .addComponent(jLabel1)
+                    .addComponent(registrationLabel)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(nameField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(coeRadioButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -107,7 +107,7 @@ public class MainJFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jLabel1)
+                .addComponent(registrationLabel)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -223,10 +223,10 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel collegeLabel;
     private javax.swing.JRadioButton copsRadioButton;
     private javax.swing.JRadioButton cosRadioButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nameField;
     private javax.swing.JLabel nameLabel;
+    private javax.swing.JLabel registrationLabel;
     private javax.swing.JButton submitButton;
     // End of variables declaration//GEN-END:variables
 }
