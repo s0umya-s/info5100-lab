@@ -27,15 +27,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -56,11 +53,7 @@
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="submitButton" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -76,21 +69,27 @@
                               <Component id="genderComboBox" pref="148" max="32767" attributes="0"/>
                               <Component id="fnameField" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="32" max="32767" attributes="0"/>
+                          <EmptySpace pref="49" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="lnameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="ageLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="phoneLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="photoLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="imgLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="photoField" pref="108" max="32767" attributes="0"/>
-                              <Component id="phoneField" max="32767" attributes="0"/>
-                              <Component id="ageField" max="32767" attributes="0"/>
-                              <Component id="lnameField" max="32767" attributes="0"/>
-                          </Group>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="submitButton" min="-2" pref="132" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="phoneField" max="32767" attributes="0"/>
+                      <Component id="ageField" max="32767" attributes="0"/>
+                      <Component id="lnameField" max="32767" attributes="0"/>
+                      <Component id="imageLabel" max="32767" attributes="0"/>
+                      <Component id="imageButton" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               </Group>
@@ -122,16 +121,31 @@
                       <Component id="phoneField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="phoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="hobbiesLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="hobbiesField" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="photoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="photoField" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="hobbiesLabel" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="imageLabel" min="-2" pref="105" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="hobbiesField" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="imgLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="imageButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="submitButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
-                  <Component id="submitButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -247,14 +261,19 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phoneFieldActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="photoLabel">
+        <Component class="javax.swing.JLabel" name="imgLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Photo"/>
+            <Property name="text" type="java.lang.String" value="Upload Photo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="photoField">
+        <Component class="javax.swing.JLabel" name="imageLabel">
+        </Component>
+        <Component class="javax.swing.JButton" name="imageButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Submit Image"/>
+          </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="photoFieldActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imageButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
