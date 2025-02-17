@@ -29,7 +29,7 @@ public final class ViewJPanel extends javax.swing.JPanel {
  
     
     public void setAllFields(){
-        this.nameField.setText(userObject.getName());
+        this.fnameField.setText(userObject.getName());
         this.collegejComboBox.setSelectedItem(userObject.getCollege());
         this.ageField.setText(String.valueOf(userObject.getAge()));
         this.hobbiesField.setText(userObject.getHobby());
@@ -48,7 +48,7 @@ public final class ViewJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
-        nameField = new javax.swing.JTextField();
+        fnameField = new javax.swing.JTextField();
         collegejComboBox = new javax.swing.JComboBox<>();
         collegeLabel = new javax.swing.JLabel();
         ageLabel = new javax.swing.JLabel();
@@ -57,6 +57,10 @@ public final class ViewJPanel extends javax.swing.JPanel {
         hobbiesLabel = new javax.swing.JLabel();
         imgLabel = new javax.swing.JLabel();
         profilepicLabel = new javax.swing.JLabel();
+        nameLabel1 = new javax.swing.JLabel();
+        lnameField = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
+        emailLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 102, 102));
 
@@ -65,16 +69,16 @@ public final class ViewJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(java.awt.Color.white);
         jLabel1.setText("Registration");
 
-        nameLabel.setText("Name");
+        nameLabel.setText("First Name");
 
-        nameField.setEditable(false);
-        nameField.addActionListener(new java.awt.event.ActionListener() {
+        fnameField.setEditable(false);
+        fnameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameFieldActionPerformed(evt);
+                fnameFieldActionPerformed(evt);
             }
         });
 
-        collegejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "College of Engineering", "College of Professional Studies", "College of Science" }));
+        collegejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male" }));
         collegejComboBox.setSelectedIndex(-1);
         collegejComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +86,7 @@ public final class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        collegeLabel.setText("College");
+        collegeLabel.setText("Gender");
 
         ageLabel.setText("Age");
 
@@ -104,6 +108,24 @@ public final class ViewJPanel extends javax.swing.JPanel {
 
         profilepicLabel.setText("Profile Picture");
 
+        nameLabel1.setText("Last Name");
+
+        lnameField.setEditable(false);
+        lnameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lnameFieldActionPerformed(evt);
+            }
+        });
+
+        emailField.setEditable(false);
+        emailField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailFieldActionPerformed(evt);
+            }
+        });
+
+        emailLabel.setText("Email");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -119,57 +141,68 @@ public final class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(collegeLabel)
                             .addComponent(nameLabel)
                             .addComponent(ageLabel)
-                            .addComponent(hobbiesLabel))
+                            .addComponent(hobbiesLabel)
+                            .addComponent(emailLabel))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(hobbiesField)
-                            .addComponent(ageField)
-                            .addComponent(nameField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(collegejComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(profilepicLabel))
-                            .addComponent(imgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(15, Short.MAX_VALUE))
+                                .addComponent(fnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20)
+                                .addComponent(nameLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(lnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(hobbiesField)
+                                    .addComponent(emailField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(collegejComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 173, Short.MAX_VALUE)
+                                    .addComponent(ageField, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(profilepicLabel))
+                                    .addComponent(imgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameLabel)
+                    .addComponent(lnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(collegeLabel)
+                    .addComponent(collegejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ageLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(hobbiesLabel)
+                    .addComponent(hobbiesField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nameLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(collegeLabel)
-                            .addComponent(collegejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ageLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(hobbiesLabel)
-                            .addComponent(hobbiesField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(91, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(imgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(profilepicLabel)
-                        .addGap(57, 57, 57))))
+                        .addComponent(profilepicLabel)))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+    private void fnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nameFieldActionPerformed
+    }//GEN-LAST:event_fnameFieldActionPerformed
 
     private void collegejComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_collegejComboBoxActionPerformed
         // TODO add your handling code here:
@@ -183,18 +216,30 @@ public final class ViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_hobbiesFieldActionPerformed
 
+    private void lnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lnameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lnameFieldActionPerformed
+
+    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailFieldActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageField;
     private javax.swing.JLabel ageLabel;
     private javax.swing.JLabel collegeLabel;
     private javax.swing.JComboBox<String> collegejComboBox;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel emailLabel;
+    private javax.swing.JTextField fnameField;
     private javax.swing.JTextField hobbiesField;
     private javax.swing.JLabel hobbiesLabel;
     private javax.swing.JLabel imgLabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField nameField;
+    private javax.swing.JTextField lnameField;
     private javax.swing.JLabel nameLabel;
+    private javax.swing.JLabel nameLabel1;
     private javax.swing.JLabel profilepicLabel;
     // End of variables declaration//GEN-END:variables
 }
