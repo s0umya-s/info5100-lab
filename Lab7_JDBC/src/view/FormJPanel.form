@@ -6,7 +6,7 @@
       <Color blue="cc" green="cc" red="0" type="rgb"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[639, 399]"/>
+      <Dimension value="[705, 450]"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -48,7 +48,7 @@
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="392" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="submitButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
@@ -82,7 +82,7 @@
                   <Component id="hobbiesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="hobbiesField" alignment="0" pref="96" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="75" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="submitButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>

@@ -58,7 +58,7 @@ public class FormJPanel extends javax.swing.JPanel {
         submitButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 204, 204));
-        setPreferredSize(new java.awt.Dimension(639, 399));
+        setPreferredSize(new java.awt.Dimension(705, 450));
 
         jLabel1.setBackground(java.awt.Color.blue);
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -130,7 +130,7 @@ public class FormJPanel extends javax.swing.JPanel {
                             .addComponent(hobbiesField, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 392, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(submitButton1)
                         .addGap(36, 36, 36)))
                 .addGap(139, 139, 139))
@@ -156,7 +156,7 @@ public class FormJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(hobbiesLabel)
                     .addComponent(hobbiesField, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(submitButton1)
                 .addGap(20, 20, 20))
         );
