@@ -14,7 +14,8 @@ public class Circle implements Shape {
     }
 
     @Override
-    public void draw() {
+    public int draw() {
         System.out.println("Circle::draw()");
+        return 1;
     }
 }

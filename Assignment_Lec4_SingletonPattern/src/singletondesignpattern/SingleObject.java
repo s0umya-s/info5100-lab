@@ -1,3 +1,5 @@
+package singletondesignpattern;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -17,7 +19,8 @@ public class SingleObject {
         return instance;
     }
     
-    public void showMessage(){
+    public String showMessage(){
         System.out.println("Hello Singleton World");
+        return "Hello Singleton World";
         }
 }

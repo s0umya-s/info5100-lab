@@ -9,5 +9,5 @@ package main;
  * @author soumyasingh
  */
 public interface Shape {
-    void draw();
+    int draw();
 }
