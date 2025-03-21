@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
  */
 public class User {
    //data members
-    private int userID;
+//    private int userID;
     private String name;
     private String college;
     private int age;
@@ -21,13 +21,13 @@ public class User {
        
     //methods
 
-    public int getUserID() {
-        return userID;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
-    }
+//    public int getUserID() {
+//        return userID;
+//    }
+//
+//    public void setUserID(int userID) {
+//        this.userID = userID;
+//    }
 
     
     
@@ -78,20 +78,20 @@ public class User {
         return "User{" + "name=" + name + ", college=" + college + ", age=" + age + ", hobby=" + hobby + '}';
     }
 
-    public int getUserId() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    public int getUserId() {
+//        throw new UnsupportedOperationException("user id get - Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
-    public void setUserId(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    public void setUserId(int aInt) {
+//        throw new UnsupportedOperationException("user id set - Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
     public Object getFirstName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("get first name - Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public Object getLastName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("set last name - Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

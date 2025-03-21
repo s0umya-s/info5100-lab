@@ -63,7 +63,7 @@ public class DatabaseConnector {
             ResultSet rs = stmt.executeQuery(query);
             while(rs.next()){
                 User u1 = new User();
-                u1.setUserId(rs.getInt("student_id"));
+//                u1.setUserId(rs.getInt("student_id"));
                 u1.setName(rs.getString("first_name"));
 //              u1.setLastName(rs.getString("last_name"));
                 u1.setCollege(rs.getString("college"));
