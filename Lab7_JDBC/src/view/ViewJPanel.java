@@ -4,7 +4,10 @@
  */
 package view;
 
+import java.awt.CardLayout;
+import static java.awt.image.ImageObserver.HEIGHT;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.User;
 import utility.DatabaseConnector;
@@ -62,6 +65,19 @@ public final class ViewJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
+    public void enableAll(){
+        this.nameField.setEnabled(true);
+        this.collegejComboBox.setEnabled(true);
+        this.ageField.setEnabled(true);
+        this.hobbiesField.setEnabled(true);
+    }
+    
+    public void disableAll(){
+        this.nameField.setEnabled(false);
+        this.collegejComboBox.setEnabled(false);
+        this.ageField.setEnabled(false);
+        this.hobbiesField.setEnabled(false);
+    }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -78,6 +94,9 @@ public final class ViewJPanel extends javax.swing.JPanel {
         hobbiesLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         userJTable1 = new javax.swing.JTable();
+        editButton = new javax.swing.JButton();
+        deleteButton = new javax.swing.JButton();
+        submiteditButton = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -102,15 +121,17 @@ public final class ViewJPanel extends javax.swing.JPanel {
 
         nameLabel.setText("Name");
 
-        nameField.setEditable(false);
+        nameField.setEnabled(false);
         nameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameFieldActionPerformed(evt);
             }
         });
 
+        collegejComboBox.setEditable(true);
         collegejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "College of Engineering", "College of Professional Studies", "College of Science" }));
         collegejComboBox.setSelectedIndex(-1);
+        collegejComboBox.setEnabled(false);
         collegejComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 collegejComboBoxActionPerformed(evt);
@@ -121,14 +142,14 @@ public final class ViewJPanel extends javax.swing.JPanel {
 
         ageLabel.setText("Age");
 
-        ageField.setEditable(false);
+        ageField.setEnabled(false);
         ageField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ageFieldActionPerformed(evt);
             }
         });
 
-        hobbiesField.setEditable(false);
+        hobbiesField.setEnabled(false);
         hobbiesField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hobbiesFieldActionPerformed(evt);
@@ -158,6 +179,27 @@ public final class ViewJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(userJTable1);
 
+        editButton.setText("Edit");
+        editButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editButtonActionPerformed(evt);
+            }
+        });
+
+        deleteButton.setText("Delete");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
+
+        submiteditButton.setText("Submit");
+        submiteditButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submiteditButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -169,18 +211,27 @@ public final class ViewJPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(collegeLabel)
-                    .addComponent(nameLabel)
-                    .addComponent(ageLabel)
-                    .addComponent(hobbiesLabel))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ageField)
-                    .addComponent(collegejComboBox, 0, 1, Short.MAX_VALUE)
-                    .addComponent(nameField)
-                    .addComponent(hobbiesField, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(editButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(deleteButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(collegeLabel)
+                            .addComponent(nameLabel)
+                            .addComponent(ageLabel)
+                            .addComponent(hobbiesLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(submiteditButton)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(ageField)
+                                .addComponent(collegejComboBox, 0, 1, Short.MAX_VALUE)
+                                .addComponent(nameField)
+                                .addComponent(hobbiesField, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(14, 14, 14))
         );
         layout.setVerticalGroup(
@@ -188,9 +239,13 @@ public final class ViewJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(editButton)
+                            .addComponent(deleteButton))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(nameLabel))
@@ -206,9 +261,10 @@ public final class ViewJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(hobbiesLabel)
                             .addComponent(hobbiesField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(68, 68, 68))
+                        .addGap(18, 18, 18)
+                        .addComponent(submiteditButton)
+                        .addGap(27, 27, 27))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -230,12 +286,71 @@ public final class ViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_hobbiesFieldActionPerformed
 
+    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = this.userJTable1.getSelectedRow();
+        
+        try{
+            this.userObject = this.users.get(selectedRowIndex);
+            
+            setAllFields();
+            enableAll();
+        } catch(Exception e){
+        }
+    }//GEN-LAST:event_editButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = this.userJTable1.getSelectedRow();
+        
+        try{
+            this.userObject = this.users.get(selectedRowIndex);
+            System.out.println("user "+ this.userObject);
+
+            DatabaseConnector.deleteUser(userObject);
+            System.out.println("User deleted successfully");
+            
+            JOptionPane.showMessageDialog(this,"Record deleted successfully!", "Success", HEIGHT);
+            populateTable();
+            
+        }
+        catch (Exception e){
+            System.out.println("Unable to delete");
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void submiteditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submiteditButtonActionPerformed
+        // TODO add your handling code here:
+        
+    User updatedUser = new User();
+    updatedUser.setName(this.nameField.getText());
+    updatedUser.setCollege(this.collegejComboBox.getSelectedItem().toString());
+    updatedUser.setAge(Integer.parseInt(this.ageField.getText()));
+    updatedUser.setHobby(this.hobbiesField.getText());
+    
+    try{
+        DatabaseConnector.updateUser(userObject, updatedUser);
+        System.out.println("The record has been updated successfully");
+        
+        
+        JOptionPane.showMessageDialog(this,"Record updated!", "Success", HEIGHT);
+        populateTable();
+        
+    } catch(Exception e){
+        System.out.println(e);
+    }
+    
+    }//GEN-LAST:event_submiteditButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageField;
     private javax.swing.JLabel ageLabel;
     private javax.swing.JLabel collegeLabel;
     private javax.swing.JComboBox<String> collegejComboBox;
+    private javax.swing.JButton deleteButton;
+    private javax.swing.JButton editButton;
     private javax.swing.JTextField hobbiesField;
     private javax.swing.JLabel hobbiesLabel;
     private javax.swing.JLabel jLabel1;
@@ -244,6 +359,7 @@ public final class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField nameField;
     private javax.swing.JLabel nameLabel;
+    private javax.swing.JButton submiteditButton;
     private javax.swing.JTable userJTable1;
     // End of variables declaration//GEN-END:variables
 

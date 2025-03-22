@@ -84,7 +84,8 @@ public class DatabaseConnector {
     
     // U - Update: Changing a value in the database
     public static void updateUser(User oldUser, User updatedUser){
-            String query = "UPDATE student SET first_name = ?, college = ?, age = ?, hobbies = ? WHERE student_id = ? ";
+            String query = "UPDATE student SET first_name = ?, college = ?, age = ?, hobbies = ? WHERE "
+                    + " first_name = ? and college = ? and age = ?";
             // Update the query
         try{
             Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
@@ -93,7 +94,11 @@ public class DatabaseConnector {
             stmt.setString(2, updatedUser.getCollege());
             stmt.setInt(3, updatedUser.getAge());
             stmt.setString(4, updatedUser.getHobby());
-            stmt.setInt(5, oldUser.getUserId());
+            
+            stmt.setString(5, oldUser.getName());
+            stmt.setString(6, oldUser.getCollege());
+            stmt.setInt(7, oldUser.getAge());
+            
             int rows = stmt.executeUpdate();
             System.out.println("Rows updated: "+rows);
             conn.close();
@@ -107,11 +112,13 @@ public class DatabaseConnector {
     
     // D - Delete 
     public static void deleteUser(User u1){
-        String query = "DELETE FROM student WHERE student_id = ?";
+        String query = "DELETE FROM student WHERE first_name = ? and age = ?";
         try {
             Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
             PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setInt(1, u1.getUserId());
+            // stmt.setInt(1, u1.getUserId());
+            stmt.setString(1, u1.getName());
+            stmt.setInt(2, u1.getAge());
             int rows = stmt.executeUpdate();
             System.out.println("Rows deleted: "+rows);
             conn.close();
