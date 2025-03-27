@@ -5,6 +5,7 @@
 package facadedesignpattern;
 
 import static junit.framework.Assert.assertEquals;
+import main.ShapeMaker;
 import static org.junit.Assert.assertNotEquals;
 import org.junit.Test;
 
@@ -21,7 +22,7 @@ public class ShapeMakerFacadeTest {
     @Test
     public void testDrawCircle() {
     System.out.println("drawCircle");
-    ShapeMakerFacade instance = new ShapeMakerFacade();
+    ShapeMaker instance = new ShapeMaker();
     
     String expResult;
     String result;
@@ -43,7 +44,7 @@ public class ShapeMakerFacadeTest {
     @Test
     public void testDrawRectangle() {
         System.out.println("drawRectangle");
-        ShapeMakerFacade instance = new ShapeMakerFacade () ;
+        ShapeMaker instance = new ShapeMaker();
         
         String expResult;
         String result;

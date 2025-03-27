@@ -9,9 +9,9 @@ package main;
  * @author soumyasingh
  */
 public class ShapeMaker {
-    private Shape circle;
-    private Shape rectangle;
-    private Shape square;
+    private final Shape circle;
+    private final Shape rectangle;
+    private final Shape square;
     
     public ShapeMaker () {
         circle = (Shape) new Circle();
@@ -19,12 +19,14 @@ public class ShapeMaker {
         square = new Square();
     }
     
-    public void drawCircle() {
+    public String drawCircle() {
         circle.draw();
+        return "Circle: :draw()";
     }
     
-    public void drawRectangle(){
+    public String drawRectangle(){
         rectangle.draw();
+        return "Rectangle: :draw()";
     }
     
     public void drawSquare(){
