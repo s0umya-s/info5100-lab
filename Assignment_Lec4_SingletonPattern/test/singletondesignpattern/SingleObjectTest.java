@@ -12,16 +12,20 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
+ * Unit tests for the SingleObject class which implements the Singleton design pattern.
+ * These tests verify that only one instance of the class exists and that
+ * the message returned from the instance is as expected.
+ * 
  * @author soumyasingh
  */
 public class SingleObjectTest {
-    
+
     public SingleObjectTest() {
     }
 
     /**
-     * Test of getInstance method, of class SingleObject.
+     * Tests that multiple calls to getInstance() return the same object reference,
+     * validating the Singleton behavior of the SingleObject class.
      */
     @Test
     public void testGetInstance() {
@@ -29,11 +33,15 @@ public class SingleObjectTest {
         
         SingleObject expResult = SingleObject.getInstance();
         SingleObject result = SingleObject.getInstance();
-        assertEquals(expResult, result);
+        assertEquals(expResult, result); // Should return same instance
     }
 
     /**
-     * Test of showMessage method, of class SingleObject.
+     * Tests the showMessage() method of the SingleObject class.
+     * 
+     * Verifies that the message returned is consistent with expectations:
+     * - Positive case checks for the correct singleton message.
+     * - Negative case ensures incorrect strings are not returned.
      */
     @Test
     public void testShowMessage() {
@@ -41,12 +49,12 @@ public class SingleObjectTest {
         
         SingleObject so = SingleObject.getInstance();
         
-        //positive test case
+        // Positive test case: Expected correct message
         String expResult = "Hello Singleton World";
         String result = so.showMessage();
         assertEquals(expResult, result);
         
-        //negative text case
+        // Negative test case: Expected different string
         expResult = "Hello World!";
         result = so.showMessage();
         assertNotEquals(expResult, result);
