@@ -1,14 +1,15 @@
+package assignment_lec8_multithreading;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package assignment_lec8_multithreading;
 
 /**
  *
  * @author soumyasingh
  */
-public class Assignment_Lec8_MultiThreading {
+public class Multithreading {
 
     /**
      * @param args the command line arguments
