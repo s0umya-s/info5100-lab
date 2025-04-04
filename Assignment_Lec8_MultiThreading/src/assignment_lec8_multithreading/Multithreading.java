@@ -16,6 +16,13 @@ public class Multithreading {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+//        FilePlayer fp = new FilePlayer();
+//        fp.play("/Users/soumyasingh/Documents/Northeastern University/INFO5100/soumya-singh/Assignment_Lec8_MultiThreading/src/Sounds/do.wav");
+    Thread t1 = new Thread1();
+    Thread t2 = new Thread2();
+    
+    t1.start();
+    t2.start();
     }
     
 }
